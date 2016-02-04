@@ -8,7 +8,9 @@
         mc:Ignorable="d"
         Title="Shell" >
     <DockPanel LastChildFill="true">
-    <ItemsControl DockPanel.Dock="Top" prism:RegionManager.RegionName="ToolbarRegion"></ItemsControl>
+        <ContentControl DockPanel.Dock="Top">
+            <StackPanel  Orientation="Horizontal" prism:RegionManager.RegionName="ToolbarRegion"></StackPanel>
+        </ContentControl>
         <ContentControl prism:RegionManager.RegionName="ContentRegion"></ContentControl>
     </DockPanel>
 

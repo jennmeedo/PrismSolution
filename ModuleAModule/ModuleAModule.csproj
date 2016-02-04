@@ -118,6 +118,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrismDemo.Infrastructure\PrismDemo.Infrastructure.csproj">
+      <Project>{48190861-aeb9-4369-b222-77eb7fc0d19c}</Project>
+      <Name>PrismDemo.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

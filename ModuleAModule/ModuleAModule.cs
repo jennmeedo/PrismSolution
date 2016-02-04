@@ -24,7 +24,11 @@ namespace ModuleAModule
         {
             container.Resolve<ToolbarView>();
             container.Resolve<ContentView>();
-            regionManager.RegisterViewWithRegion("ToolbarRegion", typeof( ToolbarView));
+            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
+            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
+            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
+            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
+            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
             regionManager.RegisterViewWithRegion("ContentRegion", typeof(ContentView));
         }
     }
