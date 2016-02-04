@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         xmlns:local="clr-namespace:PrismDemo"
+        xmlns:infra="clr-namespace:PrismDemo;assembly=PrismDemo.Infrastructure"
+        xmlns:infrastructure="clr-namespace:PrismDemo.Infrastructure;assembly=PrismDemo.Infrastructure"
         mc:Ignorable="d"
         Title="Shell" >
     <DockPanel LastChildFill="true">
         <ContentControl DockPanel.Dock="Top">
-            <StackPanel  Orientation="Horizontal" prism:RegionManager.RegionName="ToolbarRegion"></StackPanel>
+            <StackPanel  Orientation="Horizontal" prism:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ToolbarRegion}"></StackPanel>
         </ContentControl>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion"></ContentControl>
+        <ContentControl prism:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ContentRegion}"></ContentControl>
     </DockPanel>
 
 </Window>

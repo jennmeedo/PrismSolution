@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
+using PrismDemo.Infrastructure;
 
 namespace ModuleAModule
 {
@@ -24,12 +25,14 @@ namespace ModuleAModule
         {
             container.Resolve<ToolbarView>();
             container.Resolve<ContentView>();
-            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
-            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
-            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
-            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
-            regionManager.AddToRegion("ToolbarRegion", container.Resolve<ToolbarView>());
-            regionManager.RegisterViewWithRegion("ContentRegion", typeof(ContentView));
+            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
+            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
+            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
+            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
+            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
+            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
+
+            regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, typeof(ContentView));
         }
     }
 }
