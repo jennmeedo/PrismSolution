@@ -22,17 +22,28 @@ namespace PrismDemo.Infrastructure
             region.Views.CollectionChanged += (s, e) =>
             {
 
-                if (e.Action == NotifyCollectionChangedAction.Add)
+                if (e.Action == NotifyCollectionChangedAction.Add || e.Action == NotifyCollectionChangedAction.Remove)
                 {
                     foreach (FrameworkElement element in e.NewItems)
                     {
-                        regionTarget.Children.Add(element);
+                        if (e.Action == NotifyCollectionChangedAction.Add)
+                        {
+                            regionTarget.Children.Add(element);
+                        }
+                        else
+                        {
+                            if (regionTarget.Children.Contains(element))
+                            {
+                                regionTarget.Children.Remove(element);
+                            }
+
+                        }
                     }
                 }
             };
         }
 
-      
+
 
         protected override IRegion CreateRegion()
         {

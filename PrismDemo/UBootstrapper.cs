@@ -32,8 +32,8 @@ namespace PrismDemo
 
         protected override IModuleCatalog CreateModuleCatalog()
         {
-            ModuleCatalog catalog = new ModuleCatalog();
-            catalog.AddModule(typeof (ModuleAModule.ModuleAModule), InitializationMode.WhenAvailable);
+            var catalog = new DirectoryModuleCatalog();
+            catalog.ModulePath = @".\modules";
             return catalog;
         }
 
@@ -43,5 +43,7 @@ namespace PrismDemo
             mapping.RegisterMapping(typeof(StackPanel), Container.Resolve<StackPanelRegionAdapter>());
             return mapping;
         }
+
+        
     }
 }

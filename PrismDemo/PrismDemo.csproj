@@ -128,10 +128,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ModuleAModule\ModuleAModule.csproj">
-      <Project>{CD8AF656-2C2C-45CC-8894-2D53FBF83C83}</Project>
-      <Name>ModuleAModule</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PrismDemo.Infrastructure\PrismDemo.Infrastructure.csproj">
       <Project>{48190861-aeb9-4369-b222-77eb7fc0d19c}</Project>
       <Name>PrismDemo.Infrastructure</Name>

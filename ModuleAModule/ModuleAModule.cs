@@ -10,6 +10,7 @@ using PrismDemo.Infrastructure;
 
 namespace ModuleAModule
 {
+    [Module(ModuleName = "ModuleA", OnDemand = true)]
     public class ModuleAModule : IModule
     {
         private IUnityContainer container;
