@@ -1,0 +1,6 @@
+﻿<modularity:ModuleCatalog xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:modularity="clr-namespace:Prism.Modularity;assembly=Prism.Wpf">
+    <modularity:ModuleInfo InitializationMode="WhenAvailable" ModuleName="ModuleA" ModuleType="ModuleAModule.ModuleAModule, ModuleAModule, version = 1.0.0.0" Ref="file://ModuleAModule.dll"></modularity:ModuleInfo>
+    
+</modularity:ModuleCatalog>
