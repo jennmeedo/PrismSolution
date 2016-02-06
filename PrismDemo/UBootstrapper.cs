@@ -32,7 +32,7 @@ namespace PrismDemo
 
         protected override IModuleCatalog CreateModuleCatalog()
         {
-            return Prism.Modularity.ModuleCatalog.CreateFromXaml(new Uri("/PrismDemo;Component/XamlModuleCatalog.xaml", uriKind: UriKind.Relative));
+            return new ConfigurationModuleCatalog();
         }
 
         protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
