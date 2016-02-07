@@ -24,16 +24,11 @@ namespace ModuleAModule
 
         public void Initialize()
         {
-            container.Resolve<ToolbarView>();
-            container.Resolve<ContentView>();
+            container.RegisterType<ToolbarView>();
+            container.RegisterType<IContentAView,ContentView>();
+            container.RegisterType<IContentAViewViewModel, ContentAViewViewModel>();
+            regionManager.AddToRegion(RegionNames.ContentRegion, container.Resolve<ContentView>());
             regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
-            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
-            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
-            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
-            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
-            regionManager.AddToRegion(RegionNames.ToolbarRegion, container.Resolve<ToolbarView>());
-
-            regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, typeof(ContentView));
         }
     }
 }

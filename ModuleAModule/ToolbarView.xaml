@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:ModuleAModule"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            <Button Content="Toolbar"></Button>
-    </Grid>
+    
+            <Button >Test</Button>
+    
 </UserControl>

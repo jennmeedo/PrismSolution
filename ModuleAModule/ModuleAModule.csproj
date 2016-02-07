@@ -77,9 +77,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentAViewViewModel.cs" />
     <Compile Include="ContentView.xaml.cs">
       <DependentUpon>ContentView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IContentAView.cs" />
+    <Compile Include="IContentAViewViewModel.cs" />
     <Compile Include="ModuleAModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

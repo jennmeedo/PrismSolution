@@ -32,7 +32,16 @@ namespace PrismDemo
 
         protected override IModuleCatalog CreateModuleCatalog()
         {
-            return new ConfigurationModuleCatalog();
+            IModuleCatalog catalog = new ModuleCatalog();
+            Type type = typeof (ModuleAModule.ModuleAModule);
+            catalog.AddModule(new ModuleInfo()
+            {
+                ModuleName = "ModuleAModule",
+                InitializationMode = InitializationMode.WhenAvailable,
+                ModuleType = type.AssemblyQualifiedName
+            });
+
+            return catalog;
         }
 
         protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
